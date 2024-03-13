@@ -1,0 +1,24 @@
+@mixin fav-select{
+  cursor: pointer;
+  background: $purple-btn;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+@mixin checkbox-visibility{
+  .fav--check[type="checkbox"]:not(:checked) ~ .fav--rest .heart{
+    display: flex;
+  }
+  .fav--check[type="checkbox"]:not(:checked) ~ .fav--rest .solidheart{
+    display: none;
+  }
+  .fav--check[type="checkbox"]:checked ~ .fav--rest .heart{
+    display: none;
+  }
+  .fav--check[type="checkbox"]:checked ~ .fav--rest .solidheart{
+    display: flex;
+  }
+  .fav--check{
+    display: none;
+  }
+}

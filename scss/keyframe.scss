@@ -1,0 +1,45 @@
+@keyframes fav{
+  0%{
+    transform: scale(0.8);
+  }
+  10%{
+    transform: scale(1.05);
+    animation-timing-function: cubic-bezier(.42,0,.58,1);
+  }
+  20%{
+    transform: scale(1.10);
+    animation-timing-function: cubic-bezier(.42,0,.58,1);
+  }
+  30%{
+    transform: scale(1.15);
+    animation-timing-function: cubic-bezier(.42,0,.58,1);
+  }
+  40%{
+    transform: scale(1.2);
+    animation-timing-function: cubic-bezier(.42,0,.58,1);
+  }
+  50%{
+    transform: scale(1.25);
+    animation-timing-function: cubic-bezier(.42,0,.58,1);
+  }
+  60%{
+    transform: scale(1.20);
+    animation-timing-function: cubic-bezier(.42,0,.58,1);
+  }
+  70%{
+    transform: scale(1.15);
+    animation-timing-function: cubic-bezier(.42,0,.58,1);
+  }
+  80%{
+    transform: scale(1.10);
+    animation-timing-function: cubic-bezier(.42,0,.58,1);
+  }
+  90%{
+    transform: scale(1.05);
+    animation-timing-function: cubic-bezier(.42,0,.58,1);
+  }
+  100%{
+    transform: scale(1);
+    animation-timing-function: cubic-bezier(.42,0,.58,1);
+  }
+}

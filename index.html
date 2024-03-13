@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OhMyFood</title>
-<!--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"-->
-<!--          integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="-->
-<!--          crossorigin="anonymous" referrerpolicy="no-referrer" />-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <script src="https://kit.fontawesome.com/1e38fcc92e.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <div class="maincontent">
     <header class="mainheader">
             <div class="home__logo">
                 <img src="img/logo/ohmyfood@2x.svg" alt="logo"/>
@@ -27,25 +27,22 @@
     </header>
         <section class="explain">
             <h2 class="home__title">Fonctionnement</h2>
-            <div class="home">
-                <div class="home__steps">
+            <div class="home home__steplist">
                     <div class="home__step">
                         <div class="home__step--number">1</div>
-                        <i class="fa-solid fa-mobile-screen-button"></i>
-                        <p class="home__step--text">Choisissez un restaurant</p>
+                        <i class="fa-lg fa-solid fa-mobile-screen-button home__step--icon"></i>
+                        <div class="home__step--text">Choisissez un restaurant</div>
                     </div>
                     <div class="home__step">
                         <div class="home__step--number">2</div>
-                        <i class="fa-solid fa-ellipsis-vertical"></i>
-                        <i class="fa-solid fa-bars"></i>
-                        <p class="home__step--text">Composez votre menu</p>
+                        <i class="fa-lg fa-solid fa-list-ul home__step--icon"></i>
+                        <div class="home__step--text">Composez votre menu</div>
                     </div>
                     <div class="home__step">
                         <div class="home__step--number">3</div>
-                        <i class="fa-solid fa-store"></i>
-                        <p class="home__step--text">Dégustez au restaurant</p>
+                        <i class="fa-lg fa-solid fa-store home__step--icon home__step--icon--purple"></i>
+                        <div class="home__step--text">Dégustez au restaurant</div>
                     </div>
-                </div>
             </div>
         </section>
         <section class="restaurants>">
@@ -53,62 +50,70 @@
             <div class="home">
                 <div class="home__restcard">
                     <a class="home__restcard--link" href="#">
-                        <div class="home__restcard--img">
-                            <p class="home__restcard--new">Nouveau</p>
-                        </div>
+                        <p class="home__restcard--new">Nouveau</p>
+                        <img src="img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="visuel de plat à l'assiette">
                         <div class="home__restcard--info">
                             <h3 class="home__restcard--title">La palette du goût</h3>
                             <p class="home__restcard--description">Ménilmontant</p>
                         </div>
                     </a>
                     <div class="home__restcard--fav">
-                        <i class="fa-solid fa-heart fav"></i>
-                        <i class="fa-regular fa-heart unfav"></i>
+                        <input type="checkbox" id="palette-favorite" class="fav--check">
+                        <label for="palette-favorite" title="ajouter au favoris" class="fav--rest">
+                            <i class="fa-xl fa-solid fa-heart solidheart"></i>
+                            <i class="fa-xl fa-regular fa-heart heart"></i>
+                        </label>
                     </div>
                 </div>
-            <div class="home__restcard">
+                <div class="home__restcard">
                     <a class="home__restcard--link" href="#">
-                        <div class="home__restcard--img">
-                            <p class="home__restcard--new">Nouveau</p>
-                        </div>
+                        <p class="home__restcard--new">Nouveau</p>
+                        <img src="img/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="visuel de plat à l'assiette">
                         <div class="home__restcard--info">
                             <h3 class="home__restcard--title">La note enchantée</h3>
                             <p class="home__restcard--description">Charonne</p>
                         </div>
                     </a>
                     <div class="home__restcard--fav">
-                        <i class="fa-solid fa-heart fav"></i>
-                        <i class="fa-regular fa-heart unfav"></i>
+                        <input type="checkbox" id="note-favorite" class="fav--check">
+                        <label for="note-favorite" title="ajouter au favoris" class="fav--rest">
+                            <i class="fa-xl fa-solid fa-heart solidheart"></i>
+                            <i class="fa-xl fa-regular fa-heart heart"></i>
+                        </label>
                     </div>
                 </div>
-            <div class="home__restcard">
+                <div class="home__restcard">
                     <a class="home__restcard--link" href="#">
-                        <div class="home__restcard--img">
-                            <p class="home__restcard--new">Nouveau</p>
-                        </div>
+<!--                        <p class="home__restcard&#45;&#45;new">Nouveau</p>-->
+                        <img src="img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="visuel de plat à l'assiette">
                         <div class="home__restcard--info">
                             <h3 class="home__restcard--title">À la française</h3>
                             <p class="home__restcard--description">Cité Rouge</p>
                         </div>
                     </a>
                     <div class="home__restcard--fav">
-                        <i class="fa-solid fa-heart fav"></i>
-                        <i class="fa-regular fa-heart unfav"></i>
+                        <input type="checkbox" id="française-favorite" class="fav--check">
+                        <label for="française-favorite" title="ajouter au favoris" class="fav--rest">
+                            <i class="fa-xl fa-solid fa-heart solidheart"></i>
+                            <i class="fa-xl fa-regular fa-heart heart"></i>
+                        </label>
                     </div>
                 </div>
-            <div class="home__restcard">
+                <div class="home__restcard">
                     <a class="home__restcard--link" href="#">
-                        <div class="home__restcard--img">
-                            <p class="home__restcard--new">Nouveau</p>
-                        </div>
+<!--                        <p class="home__restcard&#45;&#45;new">Nouveau</p>-->
+                        <img src="img/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="visuel de plat à l'assiette">
                         <div class="home__restcard--info">
                             <h3 class="home__restcard--title">Le délice des sens</h3>
                             <p class="home__restcard--description">Folie-Méricourt</p>
                         </div>
                     </a>
                     <div class="home__restcard--fav">
-                        <i class="fa-solid fa-heart fav"></i>
-                        <i class="fa-regular fa-heart unfav"></i>
+                        <input type="checkbox" id="delice-favorite" class="fav--check">
+                        <label for="delice-favorite" title="ajouter au favoris" class="fav--rest">
+                            <i class="fa-xl fa-solid fa-heart solidheart"></i>
+                            <i class="fa-xl fa-regular fa-heart heart"></i>
+                        </label>
                     </div>
                 </div>
             </div>
@@ -126,5 +131,6 @@
             </div>
         </div>
     </footer>
+</div>
 </body>
 </html>

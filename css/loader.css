@@ -1,0 +1,17 @@
+.loader-container {
+  background-color: rgba(153, 226, 208, 0.4);
+  z-index: 666;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  animation: 150ms linear 4s loader-container;
+  animation-fill-mode: forwards;
+}
+
+/*# sourceMappingURL=loader.css.map */

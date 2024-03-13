@@ -1,0 +1,42 @@
+@import "variables";
+@import "keyframe";
+.loader-container{
+  background-color: rgba(234, 234, 234, 0.98);
+  z-index: 666;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  animation: 150ms linear 3s loader-container;
+  animation-fill-mode: forwards;
+}
+.load {
+  width: $size*8;
+  height: $size*6.5;
+  display: flex;
+  justify-content: space-evenly;
+  opacity: 0.8;
+  &__bar {
+    background-color: $cd-bars;
+    border-radius: 50%;
+    height: 100%;
+    width: $size;
+    animation: bars $anim-dur backwards infinite ease-in-out alternate;
+    @for $i from 1 through 5 {
+      &--#{$i} {
+        animation-delay: $anim-delay * $i;
+      }
+      &--#{$i}-inv {
+        animation-delay: $anim-delay * $i;
+        animation-direction: alternate-reverse;
+        animation-fill-mode: forwards;
+        background-color: $cd-bars-inv;
+      }
+    }
+  }
+}

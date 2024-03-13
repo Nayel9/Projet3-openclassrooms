@@ -43,3 +43,21 @@
     animation-timing-function: cubic-bezier(.42,0,.58,1);
   }
 }
+@keyframes bars {
+  0% {
+    transform: scaleY(0.3);
+
+  }
+  100% {
+    transform: scaleY(1.0);
+  }
+}
+@keyframes loader-container {
+  from {
+    opacity: 100%;
+  }
+  to {
+    opacity: 0;
+    display: none;
+  }
+}

@@ -6,10 +6,29 @@
     <title>OhMyFood</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <script src="https://kit.fontawesome.com/1e38fcc92e.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">    <script src="https://kit.fontawesome.com/1e38fcc92e.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <div class="loader-container">
+        <div class="loader">
+            <div class="load">
+                <div class="load__bar load__bar--1"></div>
+                <div class="load__bar load__bar--2"></div>
+                <div class="load__bar load__bar--3"></div>
+                <div class="load__bar load__bar--4"></div>
+                <div class="load__bar load__bar--5"></div>
+            </div>
+            <div class="load">
+                <div class="load__bar load__bar--1-inv"></div>
+                <div class="load__bar load__bar--2-inv"></div>
+                <div class="load__bar load__bar--3-inv"></div>
+                <div class="load__bar load__bar--4-inv"></div>
+                <div class="load__bar load__bar--5-inv"></div>
+            </div>
+        </div>
+    </div>
     <div class="maincontent">
     <header class="mainheader">
             <div class="home__logo">
@@ -17,12 +36,12 @@
             </div>
             <div class="home__location">
                 <i class="fa-solid fa-location-dot"></i>
-                <span>Paris, Belleville</span>
+                <p>Paris, Belleville</p>
             </div>
         <div class="home">
             <h1 class="home__headertitle">Réservez le menu qui vous convient</h1>
             <p class="home__headersubtitle">Découvrez des restaurants d'exception, séléctionés par nos soins.</p>
-            <a href="#" class="home__btn home__btn--purple">Explorer nos restaurants</a><!--  Ancrage vers la section restaurant sur le a-->
+            <a href="#ancre-restaurants" class="home__btn home__btn--purple">Explorer nos restaurants</a><!--  Ancrage vers la section restaurant sur le a-->
             </div>
     </header>
         <section class="explain">
@@ -45,7 +64,7 @@
                     </div>
             </div>
         </section>
-        <section class="restaurants>">
+        <section id="ancre-restaurants" class="restaurants">
             <h2 class="home__title">Restaurants</h2>
             <div class="home">
                 <div class="home__restcard">
@@ -118,14 +137,12 @@
                 </div>
             </div>
         </section>
-    <footer class="footer">
-        <div class="home">
-            <div class="home__title">
-                <h2 class="home__title--footer">ohmyfood</h2>
-            </div>
+    <footer>
+        <h2 class="home__title home__title--footer">ohmyfood</h2>
+        <div class="home__footer">
             <div class="home__nav">
-                <a class="home__nav--link" href="#"><i class="fa-solid fa-utensils"></i>Proposer un restaurant</a>
-                <a class="home__nav--link" href="#"><i class="fa-solid fa-handshake-angle"></i>Devenir partenaire</a>
+                <a class="home__nav--link" href="#"><i class="fa-xs fa-solid fa-utensils home__nav--icon1"></i>Proposer un restaurant</a>
+                <a class="home__nav--link" href="#"><i class="fa-2xs fa-solid fa-handshake-angle home__nav--icon2"></i>Devenir partenaire</a>
                 <a class="home__nav--link" href="#">Mentions légales</a>
                 <a class="home__nav--link" href="#">Contact</a>
             </div>

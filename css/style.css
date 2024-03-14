@@ -134,7 +134,7 @@
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  animation: 150ms linear 3s loader-container;
+  animation: 150ms linear 2s loader-container;
   animation-fill-mode: forwards;
 }
 
@@ -202,11 +202,6 @@
   font-family: "Roboto", sans-serif;
 }
 
-.restaurants {
-  box-sizing: border-box;
-  width: 100%;
-}
-
 .maincontent, .mainheader {
   width: 100%;
   max-width: 1440px;
@@ -247,8 +242,16 @@ body {
 
 .explain {
   background-color: white;
-  width: 100%;
   min-width: 375px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.restaurants {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
 footer {
@@ -337,10 +340,11 @@ footer {
   transition: opacity 300ms ease;
 }
 .home__title {
-  font-size: 26px;
+  font-size: 24px;
   padding-top: 40px;
-  padding-left: 20px;
-  padding-bottom: 15px;
+  padding-left: 5%;
+  display: flex;
+  justify-content: flex-start;
 }
 .home__steplist {
   display: flex;
@@ -389,17 +393,26 @@ footer {
 .home__step--text {
   font-weight: bold;
 }
+.home__groupcards {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 0 45px 0;
+  align-items: center;
+}
+.home__grouprestcard {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+}
 .home__restcard {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   position: relative;
   height: 251px;
-  width: 90%;
+  width: 100%;
   background-color: white;
   border-radius: 15px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 .home__restcard--link {
   height: 100%;
@@ -491,14 +504,19 @@ footer {
   font-family: "Shrikhand", serif;
   font-weight: 300;
   font-size: 18px;
-  padding: 20px 0 20px 30px;
+  padding: 20px 0 20px 0;
 }
 .home__footer {
   display: flex;
   justify-content: flex-start;
+  flex-direction: column;
   padding: 0 0 30px 30px;
 }
 .home__nav {
+  display: flex;
+  flex-direction: column;
+}
+.home__nav--group {
   display: flex;
   flex-direction: column;
 }
@@ -511,6 +529,52 @@ footer {
 }
 .home__nav--icon2 {
   margin-right: 8px;
+}
+
+@media (min-width: 768px) {
+  .home__headertitle {
+    font-size: 40px;
+  }
+  .home__title {
+    padding-left: 13%;
+  }
+  .home__steplist {
+    flex-direction: row;
+    gap: 40px;
+    padding-bottom: 40px;
+  }
+  .home__groupcards {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+  }
+  .home__grouprestcard {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 100px;
+    width: 100%;
+  }
+  .home__restcard {
+    width: 490px;
+  }
+  .home__footer {
+    flex-direction: row-reverse;
+    align-items: center;
+    padding: 30px 60px 0 0;
+  }
+  .home__title--footer {
+    padding-left: 80px;
+  }
+  .home__nav {
+    flex-direction: row;
+    gap: 30px;
+  }
+  .home__nav--group {
+    flex-direction: row;
+    gap: 10px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

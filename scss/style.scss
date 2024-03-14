@@ -5,10 +5,6 @@
 *{
   font-family: "Roboto", sans-serif;
 }
-.restaurants {
-  box-sizing: border-box;
-  width: 100%;
-}
 .maincontent, .mainheader,{
   width: 100%;
   max-width: 1440px;
@@ -44,8 +40,15 @@ body {
 }
 .explain {
   background-color: white;
-  width: 100%;
   min-width: 375px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.restaurants {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 footer{
   background-color: $greyblack;
@@ -136,8 +139,9 @@ footer{
   &__title{
     font-size: $title;
     padding-top: 40px;
-    padding-left: 20px;
-    padding-bottom: 15px;
+    padding-left: 5%;
+    display: flex;
+    justify-content: flex-start;
   }
   &__steplist{
     display: flex;
@@ -145,8 +149,6 @@ footer{
     align-items: center;
     justify-content: center;
     width: 100%;
-    //padding: 0 20px 40px 20px;
-    //gap: 10px;
   }
   &__step{
     display: flex;
@@ -188,17 +190,28 @@ footer{
       font-weight: bold;
     }
   }
+  &__groupcards{
+    display: flex;
+    flex-direction: column;
+    padding: 30px 0 45px 0;
+    align-items: center;
+  }
+  &__grouprestcard{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+  }
   &__restcard{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    //align-items: center;
+    //justify-content: center;
     position: relative;
     height: 251px;
-    width: 90%;
+    width: 100%;
     background-color: white;
     border-radius: 15px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     &--link{
       height: 100%;
       width: 100%;
@@ -272,16 +285,21 @@ footer{
     font-family: 'Shrikhand', serif;
     font-weight: 300;
     font-size: 18px;
-    padding: 20px 0 20px 30px;
+    padding: 20px 0 20px 0;
   }
   &__footer{
     display:flex;
     justify-content: flex-start;
+    flex-direction: column;
     padding: 0 0 30px 30px;
   }
   &__nav{
     display: flex;
     flex-direction: column;
+    &--group{
+      display: flex;
+      flex-direction: column;
+    }
     &--link{
       margin-bottom: 5px;
       font-size: 16px;
@@ -294,4 +312,51 @@ footer{
     }
   }
 }
+@media (min-width: 768px){
+  .home{
+    &__headertitle{
+      font-size: 40px;
+    }
+    &__title{
+      padding-left: 13%;
+    }
+    &__steplist{
+      flex-direction: row;
+      gap: 40px;
+      padding-bottom: 40px;
+    }
+    &__groupcards{
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      width: 100%;
 
+    }
+    &__grouprestcard{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      gap: 100px;
+      width: 100%;
+    }
+    &__restcard{
+      width: 490px;
+    }
+    &__footer{
+      flex-direction: row-reverse;
+      align-items: center;
+      padding: 30px 60px 0 0;
+    }
+    &__title--footer{
+      padding-left: 80px;
+    }
+    &__nav{
+      flex-direction: row;
+      gap: 30px;
+      &--group{
+        flex-direction: row;
+        gap: 10px;
+      }
+    }
+  }
+}

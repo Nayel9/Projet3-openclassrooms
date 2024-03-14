@@ -7,7 +7,6 @@
 }
 .maincontent, .mainheader,{
   width: 100%;
-  max-width: 1440px;
   min-width: 375px;
   box-sizing: border-box;
   display: flex;
@@ -27,6 +26,7 @@ p{
 a{
   text-decoration: none;
   color: inherit;
+  cursor: pointer;
 }
 body {
   display: flex;
@@ -108,6 +108,7 @@ footer{
     height: 50px;
     width: 218px;
     border-radius: 25px;
+    cursor: pointer;
 
     &--purple {
       background: $purple-btn;
@@ -115,6 +116,7 @@ footer{
       color: white;
       position: relative;
       z-index: 1;
+      cursor: pointer;
       &:hover {
         &::after {
           opacity: 0.2;
@@ -204,8 +206,6 @@ footer{
   &__restcard{
     display: flex;
     flex-direction: column;
-    //align-items: center;
-    //justify-content: center;
     position: relative;
     height: 251px;
     width: 100%;
@@ -215,6 +215,7 @@ footer{
     &--link{
       height: 100%;
       width: 100%;
+      cursor: pointer;
     }
     img{
       border-radius: 15px 15px 0 0;
@@ -303,6 +304,7 @@ footer{
     &--link{
       margin-bottom: 5px;
       font-size: 16px;
+      cursor: pointer;
     }
     &--icon1{
       margin-right: 10px;
@@ -316,6 +318,9 @@ footer{
   .home{
     &__headertitle{
       font-size: 40px;
+    }
+    &__location{
+      box-shadow: inherit;
     }
     &__title{
       padding-left: 13%;
@@ -352,7 +357,7 @@ footer{
     }
     &__nav{
       flex-direction: row;
-      gap: 30px;
+      gap: 40px;
       &--group{
         flex-direction: row;
         gap: 10px;

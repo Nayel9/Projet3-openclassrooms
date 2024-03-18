@@ -1,0 +1,239 @@
+@import "variables.scss";
+@import "keyframe.scss";
+@import "mixin.scss";
+section {
+  //width: 100%;
+  //min-width: 375px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  font-size: 15px;
+  font-weight: 300;
+  gap: 20px;
+}
+.mainheader__restaurants{
+  width: 100%;
+  min-width: 375px;
+  box-sizing: border-box;
+  background-color: white;
+  padding: 20px 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  &--logo{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &--logo img{
+    height: 30px;
+  }
+}
+.backimg{
+  box-sizing: border-box;
+  max-height: 385px;
+  z-index: -1;
+  img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+input[type="checkbox"] {
+  display: none;
+}
+input[type="checkbox"]:checked ~ .menu__card--item .menu__card--item--group {
+  transition:transform 350ms ease;
+  transform: translateX(0%);
+}
+input[type="checkbox"]:not(:checked) ~ .menu__card--item .menu__card--item--group{
+  transition:transform 350ms ease;
+  transform: translateX(50%);
+}
+.menu-label {
+  height: 70px;
+  width: 350px;
+  position: absolute;
+  cursor: pointer;
+}
+.menu{
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  gap: 40px;
+  background-color: #f3f3f3;
+  margin-top: -60px;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  &__title{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 30px 0 0 40px;
+    gap: 30px;
+    & h1{
+      font-size: 28px;
+      font-weight: 300;
+      font-family: 'Shrikhand', serif;
+    }
+    &--fav {
+      @include checkbox-visibility;
+      height: 26px;
+      width: 26px;
+      .solidheart {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 26px;
+        width: 26px;
+        cursor: pointer;
+        @include fav-select;
+        animation: fav 450ms;
+      }
+      .heart {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 26px;
+        width: 26px;
+        cursor: pointer;
+      }
+    }
+  }
+  &__subtitle{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    //padding-left: 30px;
+    animation: 400ms ease fadein both;
+    @for $i from 1 through 3 {
+      &--#{$i} {
+        animation-delay: 200ms * $i;
+      }
+    }
+    & h2{
+      font-size: 22px;
+      font-weight: 300;
+      //padding-left: 20px ;
+    }
+  }
+  &__underline--green{
+    width: 40px;
+    height: 3px;
+    background: #99E2D0;
+    animation: 400ms ease fadein both;
+    @for $i from 1 through 3 {
+      &--#{$i} {
+        animation-delay: 350ms * $i;
+      }
+    }
+  }
+  &__card {
+    height: 70px;
+    width: 350px;
+    animation: 400ms ease fadeout both;
+    @for $i from 1 through 9 {
+      &--#{$i} {
+        animation-delay: 150ms * $i;
+      }
+    }
+    &--item {
+      background-color: white;
+      border-radius: 15px;
+      cursor: pointer;
+      height: 100%;
+      width: 100%;
+      &--content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        box-sizing: border-box;
+        height: 100%;
+        width: 100%;
+        //white-space: nowrap;
+        overflow: hidden;
+        //text-overflow: ellipsis;
+      }
+      &--txt{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        box-sizing: border-box;
+        padding: 10px 15px;
+        gap:5px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      &--group{
+        display: flex;
+        flex-direction: row;
+        gap: 5px;
+        z-index: 69;
+      }
+      &--price{
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        padding: 10px 5px 10px 15px;
+        margin-left: 10px;
+      }
+      &--checked {
+        height: 70px;
+        width: 60px;
+        border-radius: 0 15px 15px 0;
+        background-color: #99E2D0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &--icon {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: #99E2D0;
+          background-color: white;
+          border-radius: 50%;
+          height: 20px;
+          width: 20px;
+        }
+      }
+    }
+  }
+  &__btn--cmd{
+    width: 100%;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+}
+@media (min-width: 768px){
+  .menu{
+    padding-top: 40px;
+    max-width: 66em;
+    width: 768px;
+    &__title{
+      justify-content: center;
+      padding-left: inherit;
+    }
+    &__card{
+      width: 42em;
+    }
+  }
+  .section{
+    width: 100%;
+    box-sizing: border-box;
+  }
+}

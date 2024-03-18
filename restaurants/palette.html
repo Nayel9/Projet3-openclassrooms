@@ -7,16 +7,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">    <script src="https://kit.fontawesome.com/1e38fcc92e.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/1e38fcc92e.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
     <div class="maincontent">
-        <header class="mainheader">
+        <header class="mainheader__restaurants">
             <a href="../index.html" class="back">
-                <i class=" fa-solid fa-arrow-left"></i>
+                <i class="fa-lg fa-solid fa-arrow-left"></i>
             </a>
-            <div class="home__logo">
+            <div class="mainheader__restaurants--logo">
                 <img src="../img/logo/ohmyfood@2x.svg" alt="logo"/>
             </div>
         </header>
@@ -26,7 +27,7 @@
         <div class="menu">
             <div class="menu__title">
                 <h1>La palette du goût</h1>
-                <div class="home__restcard--fav">
+                <div class="menu__title--fav">
                     <input type="checkbox" id="palette-favorite" class="fav--check">
                     <label for="palette-favorite" title="ajouter au favoris" class="fav--rest">
                         <i class="fa-xl fa-solid fa-heart solidheart"></i>
@@ -35,105 +36,222 @@
                 </div>
             </div>
             <section class="entree">
-                <div class="menu__list">
-                    <h2 class="menu__list--title">Entrées</h2>
-                    <div class="underline__green"></div>
-                    <div class="menu__list--item">
-                        <div class="menu__list--item--name">
-                            <h3>Fricassée d'escargot</h3>
-                        </div>
-                        <div class="menu__list--item--group">
-                            <div class="menu__list--item--description">Au piment d'Espelette</div>
-                            <div class="menu__list--item--price">25€</div>
+                <div class="menu__subtitle menu__subtitle--1">
+                    <h2>Entrées</h2>
+                    <div class="menu__underline--green menu__underline--green--1"></div>
+                </div>
+                <div class="menu__card menu__card--1">
+                    <input type="checkbox" id="palette-entree1">
+                    <div class="menu__card--item">
+                        <label for="palette-entree1" class="menu-label" title="Fricassée d'escargots"></label>
+                        <div class="menu__card--item--content">
+                            <div class="menu__card--item--txt">
+                                <h3>Fricassée d'escargots</h3>
+                                <p>Au piment d'Espelette</p>
+                            </div>
+                            <div class="menu__card--item--group">
+                                <div class="menu__card--item--price">
+                                    35€
+                                </div>
+                                <div class="menu__card--item--checked">
+                                    <div class="menu__card--item--checked--icon">
+                                        <i class="fa-solid fa-check"></i>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="menu__list--item">
-                        <div class="menu__list--item--name">
-                            <h3>Foie gras</h3>
-                        </div>
-                        <div class="menu__list--item--group">
-                            <div class="menu__list--item--description">Au piment d'Espelette</div>
-                            <div class="menu__list--item--price">25€</div>
+                </div>
+                <div class="menu__card menu__card--2">
+                    <input type="checkbox" id="palette-entree2">
+                    <div class="menu__card--item">
+                        <label for="palette-entree2" class="menu-label" title="Fricassée d'escargots"></label>
+                        <div class="menu__card--item--content">
+                            <div class="menu__card--item--txt">
+                                <h3>Fricassée d'escargots</h3>
+                                <p>Au piment d'Espelette</p>
+                            </div>
+                            <div class="menu__card--item--group">
+                                <div class="menu__card--item--price">
+                                    35€
+                                </div>
+                                <div class="menu__card--item--checked">
+                                    <div class="menu__card--item--checked--icon">
+                                        <i class="fa-solid fa-check"></i>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="menu__list--item">
-                        <div class="menu__list--item--name">
-                            <h3>Salade de chèvre chaud</h3>
-                        </div>
-                        <div class="menu__list--item--group">
-                            <div class="menu__list--item--description">Au piment d'Espelette</div>
-                            <div class="menu__list--item--price">25€</div>
+                </div>
+                <div class="menu__card menu__card--3">
+                    <input type="checkbox" id="palette-entree3">
+                    <div class="menu__card--item">
+                        <label for="palette-entree3" class="menu-label" title="Fricassée d'escargots"></label>
+                        <div class="menu__card--item--content">
+                            <div class="menu__card--item--txt">
+                                <h3>Fricassée d'escargots</h3>
+                                <p>Au piment d'Espelette</p>
+                            </div>
+                            <div class="menu__card--item--group">
+                                <div class="menu__card--item--price">
+                                    35€
+                                </div>
+                                <div class="menu__card--item--checked">
+                                    <div class="menu__card--item--checked--icon">
+                                        <i class="fa-solid fa-check"></i>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
             <section class="plat">
-                <div class="menu__list">
-                    <h2 class="menu__list--title">Entrées</h2>
-                    <div class="underline__green"></div>
-                    <div class="menu__list--item">
-                        <div class="menu__list--item--name">
-                            <h3>Fricassée d'escargot</h3>
-                        </div>
-                        <div class="menu__list--item--group">
-                            <div class="menu__list--item--description">Au piment d'Espelette</div>
-                            <div class="menu__list--item--price">25€</div>
+                <div class="menu__subtitle menu__subtitle--2">
+                    <h2>Plats</h2>
+                    <div class="menu__underline--green menu__underline--green--2"></div>
+                </div>
+                <div class="menu__card menu__card--4">
+                    <input type="checkbox" id="palette-plat1">
+                    <div class="menu__card--item">
+                        <label for="palette-plat1" class="menu-label" title="Fricassée d'escargots"></label>
+                        <div class="menu__card--item--content">
+                            <div class="menu__card--item--txt">
+                                <h3>Fricassée d'escargots</h3>
+                                <p>Au piment d'Espelette</p>
+                            </div>
+                            <div class="menu__card--item--group">
+                                <div class="menu__card--item--price">
+                                    35€
+                                </div>
+                                <div class="menu__card--item--checked">
+                                    <div class="menu__card--item--checked--icon">
+                                        <i class="fa-solid fa-check"></i>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="menu__list--item">
-                        <div class="menu__list--item--name">
-                            <h3>Foie gras</h3>
-                        </div>
-                        <div class="menu__list--item--group">
-                            <div class="menu__list--item--description">Au piment d'Espelette</div>
-                            <div class="menu__list--item--price">25€</div>
+                </div>
+                <div class="menu__card menu__card--5">
+                    <input type="checkbox" id="palette-plat2">
+                    <div class="menu__card--item">
+                        <label for="palette-plat2" class="menu-label" title="Fricassée d'escargots"></label>
+                        <div class="menu__card--item--content">
+                            <div class="menu__card--item--txt">
+                                <h3>Fricassée d'escargots</h3>
+                                <p>Au piment d'Espelette</p>
+                            </div>
+                            <div class="menu__card--item--group">
+                                <div class="menu__card--item--price">
+                                    35€
+                                </div>
+                                <div class="menu__card--item--checked">
+                                    <div class="menu__card--item--checked--icon">
+                                        <i class="fa-solid fa-check"></i>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="menu__list--item">
-                        <div class="menu__list--item--name">
-                            <h3>Salade de chèvre chaud</h3>
-                        </div>
-                        <div class="menu__list--item--group">
-                            <div class="menu__list--item--description">Au piment d'Espelette</div>
-                            <div class="menu__list--item--price">25€</div>
+                </div>
+                <div class="menu__card menu__card--6">
+                    <input type="checkbox" id="palette-plat3">
+                    <div class="menu__card--item">
+                        <label for="palette-plat3" class="menu-label" title="Fricassée d'escargots"></label>
+                        <div class="menu__card--item--content">
+                            <div class="menu__card--item--txt">
+                                <h3>Fricassée d'escargots</h3>
+                                <p>Au piment d'Espelette</p>
+                            </div>
+                            <div class="menu__card--item--group">
+                                <div class="menu__card--item--price">
+                                    35€
+                                </div>
+                                <div class="menu__card--item--checked">
+                                    <div class="menu__card--item--checked--icon">
+                                        <i class="fa-solid fa-check"></i>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
             <section class="dessert">
-                <div class="menu__list">
-                    <h2 class="menu__list--title">Entrées</h2>
-                    <div class="underline__green"></div>
-                    <div class="menu__list--item">
-                        <div class="menu__list--item--name">
-                            <h3>Fricassée d'escargot</h3>
-                        </div>
-                        <div class="menu__list--item--group">
-                            <div class="menu__list--item--description">Au piment d'Espelette</div>
-                            <div class="menu__list--item--price">25€</div>
+                <div class="menu__subtitle menu__subtitle--3">
+                    <h2>Desserts</h2>
+                    <div class="menu__underline--green menu__underline--green--3"></div>
+                </div>
+                <div class="menu__card menu__card--7">
+                    <input type="checkbox" id="palette-dessert1">
+                    <div class="menu__card--item">
+                        <label for="palette-dessert1" class="menu-label" title="Fricassée d'escargots"></label>
+                        <div class="menu__card--item--content">
+                            <div class="menu__card--item--txt">
+                                <h3>Fricassée d'escargots</h3>
+                                <p>Au piment d'Espelette</p>
+                            </div>
+                            <div class="menu__card--item--group">
+                                <div class="menu__card--item--price">
+                                    35€
+                                </div>
+                                <div class="menu__card--item--checked">
+                                    <div class="menu__card--item--checked--icon">
+                                        <i class="fa-solid fa-check"></i>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="menu__list--item">
-                        <div class="menu__list--item--name">
-                            <h3>Foie gras</h3>
-                        </div>
-                        <div class="menu__list--item--group">
-                            <div class="menu__list--item--description">Au piment d'Espelette</div>
-                            <div class="menu__list--item--price">25€</div>
+                </div>
+                <div class="menu__card menu__card--8">
+                    <input type="checkbox" id="palette-dessert2">
+                    <div class="menu__card--item">
+                        <label for="palette-dessert2" class="menu-label" title="Fricassée d'escargots"></label>
+                        <div class="menu__card--item--content">
+                            <div class="menu__card--item--txt">
+                                <h3>Fricassée d'escargots</h3>
+                                <p>Au piment d'Espelette</p>
+                            </div>
+                            <div class="menu__card--item--group">
+                                <div class="menu__card--item--price">
+                                    35€
+                                </div>
+                                <div class="menu__card--item--checked">
+                                    <div class="menu__card--item--checked--icon">
+                                        <i class="fa-solid fa-check"></i>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="menu__list--item">
-                        <div class="menu__list--item--name">
-                            <h3>Salade de chèvre chaud</h3>
-                        </div>
-                        <div class="menu__list--item--group">
-                            <div class="menu__list--item--description">Au piment d'Espelette</div>
-                            <div class="menu__list--item--price">25€</div>
+                </div>
+                <div class="menu__card menu__card--9">
+                    <input type="checkbox" id="palette-dessert3">
+                    <div class="menu__card--item">
+                        <label for="palette-dessert3" class="menu-label" title="Fricassée d'escargots"></label>
+                        <div class="menu__card--item--content">
+                            <div class="menu__card--item--txt">
+                                <h3>Fricassée d'escargots</h3>
+                                <p>Au piment d'Espelette</p>
+                            </div>
+                            <div class="menu__card--item--group">
+                                <div class="menu__card--item--price">
+                                    35€
+                                </div>
+                                <div class="menu__card--item--checked">
+                                    <div class="menu__card--item--checked--icon">
+                                        <i class="fa-solid fa-check"></i>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
-            <div class="btn-cmd">
+            <div class="menu__btn--cmd">
                 <a href="#" class="home__btn home__btn--purple">Commander</a>
             </div>
         </div>

@@ -44,7 +44,8 @@
                     <a href="#ancre-restaurants" class="home__btn home__btn--purple">Explorer nos restaurants</a><!--  Ancrage vers la section restaurant sur le a-->
                 </div>
         </header>
-        <section class="explain">
+        <div class="home home__white">
+            <section class="explain">
             <h2 class="home__title">Fonctionnement</h2>
             <div class="home home__steplist">
                     <div class="home__step">
@@ -64,12 +65,14 @@
                     </div>
             </div>
         </section>
-        <section id="ancre-restaurants" class="restaurants">
+        </div>
+        <div class="home">
+            <section id="ancre-restaurants" class="restaurants">
             <h2 class="home__title">Restaurants</h2>
             <div class="home__groupcards">
                 <div class="home__grouprestcard">
                     <div class="home__restcard">
-                        <a class="home__restcard--link" href="#">
+                        <a class="home__restcard--link" href="restaurants/palette.html">
                             <p class="home__restcard--new">Nouveau</p>
                             <img src="img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="visuel de plat à l'assiette">
                             <div class="home__restcard--info">
@@ -95,7 +98,7 @@
                             </div>
                         </a>
                         <div class="home__restcard--fav">
-                            <input type="checkbox" id="note-favorite" class="fav--check">
+                            <input type="checkbox" id="note-favorite" class="fav--check" checked>
                             <label for="note-favorite" title="ajouter au favoris" class="fav--rest">
                                 <i class="fa-xl fa-solid fa-heart solidheart"></i>
                                 <i class="fa-xl fa-regular fa-heart heart"></i>
@@ -141,6 +144,7 @@
                 </div>
             </div>
         </section>
+        </div>
     <footer>
         <div class="home__footer">
             <h2 class="home__title home__title--footer">ohmyfood</h2>

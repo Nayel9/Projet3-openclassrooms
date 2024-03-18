@@ -62,3 +62,23 @@
     z-index: -999;
   }
 }
+@keyframes fadein {
+  from {
+    transform: translateX(-400%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+@keyframes fadeout {
+  from {
+    transform: translateX(400%);
+    opacity:0;
+  }
+  to {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}

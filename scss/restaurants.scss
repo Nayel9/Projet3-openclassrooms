@@ -49,16 +49,18 @@ input[type="checkbox"] {
 }
 input[type="checkbox"]:checked ~ .menu__card--item .menu__card--item--group {
   transition:transform 350ms ease;
-  transform: translateX(0%);
+  transform: translateX(-100%);
 }
 input[type="checkbox"]:not(:checked) ~ .menu__card--item .menu__card--item--group{
   transition:transform 350ms ease;
-  transform: translateX(50%);
+  transform: translateX(-46%);
+  background-color: transparent;
 }
 .menu-label {
   height: 70px;
-  width: 350px;
+  width: 100%;
   position: absolute;
+  z-index: 169;
   cursor: pointer;
 }
 .menu{
@@ -114,7 +116,6 @@ input[type="checkbox"]:not(:checked) ~ .menu__card--item .menu__card--item--grou
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    //padding-left: 30px;
     animation: 400ms ease fadein both;
     @for $i from 1 through 3 {
       &--#{$i} {
@@ -124,7 +125,6 @@ input[type="checkbox"]:not(:checked) ~ .menu__card--item .menu__card--item--grou
     & h2{
       font-size: 22px;
       font-weight: 300;
-      //padding-left: 20px ;
     }
   }
   &__underline--green{
@@ -141,8 +141,10 @@ input[type="checkbox"]:not(:checked) ~ .menu__card--item .menu__card--item--grou
   &__card {
     height: 70px;
     width: 350px;
+    position: relative;
+    overflow: hidden;
     animation: 400ms ease fadeout both;
-    @for $i from 1 through 9 {
+    @for $i from 1 through 10 {
       &--#{$i} {
         animation-delay: 150ms * $i;
       }
@@ -161,9 +163,9 @@ input[type="checkbox"]:not(:checked) ~ .menu__card--item .menu__card--item--grou
         box-sizing: border-box;
         height: 100%;
         width: 100%;
-        //white-space: nowrap;
+        white-space: nowrap;
         overflow: hidden;
-        //text-overflow: ellipsis;
+        text-overflow: ellipsis;
       }
       &--txt{
         display: flex;
@@ -171,15 +173,24 @@ input[type="checkbox"]:not(:checked) ~ .menu__card--item .menu__card--item--grou
         justify-content: center;
         align-items: flex-start;
         box-sizing: border-box;
-        padding: 10px 15px;
+        min-width: 350px;
+        padding: 10px 0 10px 15px;
         gap:5px;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
+        p{
+          font-size: 15px;
+          font-weight: 300;
+        }
       }
       &--group{
         display: flex;
         flex-direction: row;
+        position: absolute;
+        left: 100%;
+        background-color: white;
+        border-radius: 0 25px 25px 0;
         gap: 5px;
         z-index: 69;
       }
@@ -187,8 +198,9 @@ input[type="checkbox"]:not(:checked) ~ .menu__card--item .menu__card--item--grou
         display: flex;
         justify-content: flex-end;
         align-items: flex-end;
-        padding: 10px 5px 10px 15px;
-        margin-left: 10px;
+        padding: 10px 5px 12px 15px;
+        font-weight: bold;
+        font-size: 15px;
       }
       &--checked {
         height: 70px;
@@ -219,20 +231,22 @@ input[type="checkbox"]:not(:checked) ~ .menu__card--item .menu__card--item--grou
     align-items: flex-start;
   }
 }
-@media (min-width: 768px){
-  .menu{
+@media (min-width: 768px) {
+  .menu {
     padding-top: 40px;
     max-width: 66em;
     width: 768px;
-    &__title{
+
+    &__title {
       justify-content: center;
       padding-left: inherit;
     }
-    &__card{
+
+    &__card {
       width: 42em;
     }
   }
-  .section{
+  .section {
     width: 100%;
     box-sizing: border-box;
   }

@@ -9,10 +9,11 @@
   top: 0;
   left: 0;
   display: flex;
+  padding-top: 15rem;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   overflow: hidden;
-  animation: 150ms linear 2s loader-container;
+  animation: 150ms linear 3s loader-container;
   animation-fill-mode: forwards;
 }
 .load {
@@ -38,5 +39,11 @@
         background-color: $cd-bars-inv;
       }
     }
+  }
+}
+@media (min-width: 768px){
+  .load{
+    width: 3rem*8;
+    height: 3rem*6.5;
   }
 }

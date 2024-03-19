@@ -173,16 +173,17 @@
   top: 0;
   left: 0;
   display: flex;
+  padding-top: 15rem;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   overflow: hidden;
-  animation: 150ms linear 2s loader-container;
+  animation: 150ms linear 3s loader-container;
   animation-fill-mode: forwards;
 }
 
 .load {
-  width: 24vh;
-  height: 19.5vh;
+  width: 16rem;
+  height: 13rem;
   display: flex;
   justify-content: space-evenly;
   opacity: 0.8;
@@ -191,7 +192,7 @@
   background-color: #9356DC;
   border-radius: 50%;
   height: 100%;
-  width: 3vh;
+  width: 2rem;
   animation: bars 1000ms backwards infinite ease-in-out alternate;
 }
 .load__bar--1 {
@@ -240,6 +241,12 @@
   background-color: #FF79DA;
 }
 
+@media (min-width: 768px) {
+  .load {
+    width: 24rem;
+    height: 19.5rem;
+  }
+}
 @keyframes fav {
   0% {
     transform: scale(0.8);
@@ -373,18 +380,20 @@ input[type=checkbox] {
 
 input[type=checkbox]:checked ~ .menu__card--item .menu__card--item--group {
   transition: transform 350ms ease;
-  transform: translateX(0%);
+  transform: translateX(-100%);
 }
 
 input[type=checkbox]:not(:checked) ~ .menu__card--item .menu__card--item--group {
   transition: transform 350ms ease;
-  transform: translateX(50%);
+  transform: translateX(-46%);
+  background-color: transparent;
 }
 
 .menu-label {
   height: 70px;
-  width: 350px;
+  width: 100%;
   position: absolute;
+  z-index: 169;
   cursor: pointer;
 }
 
@@ -493,6 +502,8 @@ input[type=checkbox]:not(:checked) ~ .menu__card--item .menu__card--item--group 
 .menu__card {
   height: 70px;
   width: 350px;
+  position: relative;
+  overflow: hidden;
   animation: 400ms ease fadeout both;
 }
 .menu__card--1 {
@@ -522,6 +533,9 @@ input[type=checkbox]:not(:checked) ~ .menu__card--item .menu__card--item--group 
 .menu__card--9 {
   animation-delay: 1350ms;
 }
+.menu__card--10 {
+  animation-delay: 1500ms;
+}
 .menu__card--item {
   background-color: white;
   border-radius: 15px;
@@ -537,7 +551,9 @@ input[type=checkbox]:not(:checked) ~ .menu__card--item .menu__card--item--group 
   box-sizing: border-box;
   height: 100%;
   width: 100%;
+  white-space: nowrap;
   overflow: hidden;
+  text-overflow: ellipsis;
 }
 .menu__card--item--txt {
   display: flex;
@@ -545,15 +561,24 @@ input[type=checkbox]:not(:checked) ~ .menu__card--item .menu__card--item--group 
   justify-content: center;
   align-items: flex-start;
   box-sizing: border-box;
-  padding: 10px 15px;
+  min-width: 350px;
+  padding: 10px 0 10px 15px;
   gap: 5px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
+.menu__card--item--txt p {
+  font-size: 15px;
+  font-weight: 300;
+}
 .menu__card--item--group {
   display: flex;
   flex-direction: row;
+  position: absolute;
+  left: 100%;
+  background-color: white;
+  border-radius: 0 25px 25px 0;
   gap: 5px;
   z-index: 69;
 }
@@ -561,8 +586,9 @@ input[type=checkbox]:not(:checked) ~ .menu__card--item .menu__card--item--group 
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
-  padding: 10px 5px 10px 15px;
-  margin-left: 10px;
+  padding: 10px 5px 12px 15px;
+  font-weight: bold;
+  font-size: 15px;
 }
 .menu__card--item--checked {
   height: 70px;
@@ -611,6 +637,22 @@ input[type=checkbox]:not(:checked) ~ .menu__card--item .menu__card--item--group 
 }
 * {
   font-family: "Roboto", sans-serif;
+}
+
+#search-location {
+  border: unset;
+  background: none;
+  color: black;
+  font-size: 16px;
+}
+#search-location:focus {
+  outline: none;
+}
+#search-location::placeholder {
+  opacity: 1;
+  color: black;
+  font-size: 16px;
+  font-weight: 300;
 }
 
 .maincontent, .mainheader {
@@ -690,6 +732,7 @@ footer {
   justify-content: center;
   align-items: center;
   font-weight: bold;
+  padding-left: 75px;
   gap: 17px;
   height: 50px;
   width: 100%;
@@ -771,7 +814,7 @@ footer {
   justify-content: center;
   align-items: center;
   position: relative;
-  left: -14px;
+  left: -12px;
   font-size: 14px;
   height: 24px;
   width: 24px;
@@ -934,7 +977,7 @@ footer {
   margin-right: 8px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 859px) {
   .home__headertitle {
     font-size: 40px;
   }
@@ -943,8 +986,14 @@ footer {
   }
   .home__steplist {
     flex-direction: row;
-    gap: 40px;
+    gap: 15px;
     padding-bottom: 40px;
+  }
+  .home__restcard {
+    width: 400px;
+  }
+  .home__step {
+    width: 260px;
   }
   .home__groupcards {
     display: flex;
@@ -956,11 +1005,8 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 100px;
+    gap: 50px;
     width: 100%;
-  }
-  .home__restcard {
-    width: 490px;
   }
   .home__footer {
     flex-direction: row-reverse;
@@ -977,6 +1023,20 @@ footer {
   .home__nav--group {
     flex-direction: row;
     gap: 10px;
+  }
+}
+@media (min-width: 1024px) {
+  .home__restcard {
+    width: 490px;
+  }
+  .home__steplist {
+    gap: 40px;
+  }
+  .home__step {
+    width: 322px;
+  }
+  .home__grouprestcard {
+    gap: 100px;
   }
 }
 

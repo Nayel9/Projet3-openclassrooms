@@ -63,7 +63,7 @@
 }
 @keyframes fadein {
   from {
-    transform: translateX(-400%);
+    transform: translateX(-100%);
     opacity: 0;
   }
   to {
@@ -73,7 +73,7 @@
 }
 @keyframes fadeout {
   from {
-    transform: translateX(400%);
+    transform: translateX(100%);
     opacity: 0;
   }
   to {
@@ -146,7 +146,7 @@
 }
 @keyframes fadein {
   from {
-    transform: translateX(-400%);
+    transform: translateX(-100%);
     opacity: 0;
   }
   to {
@@ -156,7 +156,7 @@
 }
 @keyframes fadeout {
   from {
-    transform: translateX(400%);
+    transform: translateX(100%);
     opacity: 0;
   }
   to {
@@ -173,9 +173,8 @@
   top: 0;
   left: 0;
   display: flex;
-  padding-top: 15rem;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   overflow: hidden;
   animation: 150ms linear 3s loader-container;
   animation-fill-mode: forwards;
@@ -312,7 +311,7 @@
 }
 @keyframes fadein {
   from {
-    transform: translateX(-400%);
+    transform: translateX(-100%);
     opacity: 0;
   }
   to {
@@ -322,7 +321,7 @@
 }
 @keyframes fadeout {
   from {
-    transform: translateX(400%);
+    transform: translateX(100%);
     opacity: 0;
   }
   to {
@@ -378,15 +377,25 @@ input[type=checkbox] {
   display: none;
 }
 
-input[type=checkbox]:checked ~ .menu__card--item .menu__card--item--group {
+input[type=checkbox]:checked ~ .menu__card--item .menu__card--item--checked--icon {
   transition: transform 350ms ease;
-  transform: translateX(-100%);
+  scale: 1;
+  transform: rotate(-360deg);
 }
 
-input[type=checkbox]:not(:checked) ~ .menu__card--item .menu__card--item--group {
-  transition: transform 350ms ease;
-  transform: translateX(-46%);
-  background-color: transparent;
+input[type=checkbox]:not(:checked) ~ .menu__card--item .menu__card--item--checked--icon {
+  transition: 350ms ease;
+  scale: 0;
+}
+
+input[type=checkbox]:checked ~ .menu__card--item .menu__card--item--checked, .menu__card--item--checked--icon {
+  transition: 350ms ease;
+  width: 70px;
+}
+
+input[type=checkbox]:not(:checked) ~ .menu__card--item .menu__card--item--checked {
+  transition: 350ms ease;
+  width: 0;
 }
 
 .menu-label {
@@ -409,6 +418,7 @@ input[type=checkbox]:not(:checked) ~ .menu__card--item .menu__card--item--group 
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 .menu__title {
   width: 100%;
@@ -537,9 +547,11 @@ input[type=checkbox]:not(:checked) ~ .menu__card--item .menu__card--item--group 
   animation-delay: 1500ms;
 }
 .menu__card--item {
+  display: flex;
   background-color: white;
   border-radius: 15px;
   cursor: pointer;
+  overflow: hidden;
   height: 100%;
   width: 100%;
 }
@@ -561,38 +573,29 @@ input[type=checkbox]:not(:checked) ~ .menu__card--item .menu__card--item--group 
   justify-content: center;
   align-items: flex-start;
   box-sizing: border-box;
-  min-width: 350px;
   padding: 10px 0 10px 15px;
   gap: 5px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  flex: 1;
 }
-.menu__card--item--txt p {
-  font-size: 15px;
-  font-weight: 300;
-}
-.menu__card--item--group {
-  display: flex;
-  flex-direction: row;
-  position: absolute;
-  left: 100%;
-  background-color: white;
-  border-radius: 0 25px 25px 0;
-  gap: 5px;
-  z-index: 69;
+.menu__card--item--txt h3, .menu__card--item--txt p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
 }
 .menu__card--item--price {
   display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  padding: 10px 5px 12px 15px;
-  font-weight: bold;
-  font-size: 15px;
+  position: relative;
+  padding: 30px 15px 0 15px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .menu__card--item--checked {
-  height: 70px;
-  width: 60px;
+  width: 0;
   border-radius: 0 15px 15px 0;
   background-color: #99E2D0;
   display: flex;
@@ -608,6 +611,7 @@ input[type=checkbox]:not(:checked) ~ .menu__card--item .menu__card--item--group 
   border-radius: 50%;
   height: 20px;
   width: 20px;
+  scale: 0;
 }
 .menu__btn--cmd {
   width: 100%;
@@ -635,6 +639,15 @@ input[type=checkbox]:not(:checked) ~ .menu__card--item .menu__card--item--group 
     box-sizing: border-box;
   }
 }
+.backimg {
+  width: 100%;
+}
+.backimg img {
+  max-height: 385px;
+  width: 100%;
+  object-fit: cover;
+}
+
 * {
   font-family: "Roboto", sans-serif;
 }
@@ -673,7 +686,7 @@ h1, h2, h3 {
 p {
   margin: inherit;
   font-weight: 300;
-  font-size: 16px;
+  font-size: 15px;
 }
 
 a {
@@ -691,6 +704,7 @@ body {
   padding: 0;
   background-color: #F6F6F6;
   width: 100%;
+  overflow-x: hidden;
 }
 
 .home__white {
@@ -732,6 +746,7 @@ footer {
   justify-content: center;
   align-items: center;
   font-weight: bold;
+  box-sizing: border-box;
   padding-left: 75px;
   gap: 17px;
   height: 50px;

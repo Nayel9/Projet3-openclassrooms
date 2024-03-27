@@ -64,7 +64,7 @@
 }
 @keyframes fadein {
   from {
-    transform: translateX(-400%);
+    transform: translateX(-100%);
     opacity: 0;
   }
   to {
@@ -74,7 +74,7 @@
 }
 @keyframes fadeout {
   from {
-    transform: translateX(400%);
+    transform: translateX(100%);
     opacity:0;
   }
   to {

@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<!--Loader de la page d'accueil-->
     <div class="loader-container">
         <div class="loader">
             <div class="load">
@@ -30,7 +31,7 @@
         </div>
     </div>
     <div class="maincontent">
-        <header class="mainheader">
+        <header class="mainheader"><!--Header de la page d'accueil-->
                 <div class="home__logo">
                     <img src="img/logo/ohmyfood@2x.svg" alt="logo"/>
                 </div>
@@ -43,11 +44,11 @@
                 <div class="home">
                     <h1 class="home__headertitle">Réservez le menu qui vous convient</h1>
                     <p class="home__headersubtitle">Découvrez des restaurants d'exception, séléctionés par nos soins.</p>
-                    <a href="#ancre-restaurants" class="home__btn home__btn--purple">Explorer nos restaurants</a><!--  Ancrage vers la section restaurant sur le a-->
+                    <a href="#ancre-restaurants" class="home__btn home__btn--purple">Explorer nos restaurants</a><!-- Bouton avec Ancrage vers la section restaurant-->
                 </div>
         </header>
         <div class="home home__white">
-            <section class="explain">
+            <section class="explain"><!--Etapes de fonctionnement du site-->
             <h2 class="home__title">Fonctionnement</h2>
             <div class="home home__steplist">
                     <div class="home__step">
@@ -69,10 +70,10 @@
         </section>
         </div>
         <div class="home">
-            <section id="ancre-restaurants" class="restaurants">
+            <section id="ancre-restaurants" class="restaurants"><!--Affichage des différents restaurants-->
             <h2 class="home__title">Restaurants</h2>
             <div class="home__groupcards">
-                <div class="home__grouprestcard">
+                <div class="home__grouprestcard"><!--Regroupement des cards restaurant par paire pour gérer le responsive-->
                     <div class="home__restcard">
                         <a class="home__restcard--link" href="restaurants/palette.html">
                             <p class="home__restcard--new">Nouveau</p>
@@ -82,7 +83,7 @@
                                 <p class="home__restcard--description">Ménilmontant</p>
                             </div>
                         </a>
-                        <div class="home__restcard--fav">
+                        <div class="home__restcard--fav"><!--Structure du bouton favoris en forme de coeur-->
                             <input type="checkbox" id="palette-favorite" class="fav--check">
                             <label for="palette-favorite" title="ajouter au favoris" class="fav--rest">
                                 <i class="fa-xl fa-solid fa-heart solidheart"></i>
@@ -99,7 +100,7 @@
                                 <p class="home__restcard--description">Charonne</p>
                             </div>
                         </a>
-                        <div class="home__restcard--fav">
+                        <div class="home__restcard--fav"><!--Structure du bouton favoris en forme de coeur-->
                             <input type="checkbox" id="note-favorite" class="fav--check" checked>
                             <label for="note-favorite" title="ajouter au favoris" class="fav--rest">
                                 <i class="fa-xl fa-solid fa-heart solidheart"></i>
@@ -108,7 +109,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="home__grouprestcard">
+                <div class="home__grouprestcard"><!--Regroupement des cards restaurant par paire pour gérer le responsive-->
                     <div class="home__restcard">
                         <a class="home__restcard--link" href="restaurants/alafrançaise.html">
     <!--                        <p class="home__restcard&#45;&#45;new">Nouveau</p>-->
@@ -118,7 +119,7 @@
                                 <p class="home__restcard--description">Cité Rouge</p>
                             </div>
                         </a>
-                        <div class="home__restcard--fav">
+                        <div class="home__restcard--fav"><!--Structure du bouton favoris en forme de coeur-->
                             <input type="checkbox" id="française-favorite" class="fav--check">
                             <label for="française-favorite" title="ajouter au favoris" class="fav--rest">
                                 <i class="fa-xl fa-solid fa-heart solidheart"></i>
@@ -135,7 +136,7 @@
                                 <p class="home__restcard--description">Folie-Méricourt</p>
                             </div>
                         </a>
-                        <div class="home__restcard--fav">
+                        <div class="home__restcard--fav"><!--Structure du bouton favoris en forme de coeur-->
                             <input type="checkbox" id="delice-favorite" class="fav--check">
                             <label for="delice-favorite" title="ajouter au favoris" class="fav--rest">
                                 <i class="fa-xl fa-solid fa-heart solidheart"></i>
@@ -148,7 +149,7 @@
         </section>
         </div>
     <footer>
-        <div class="home__footer">
+        <div class="home__footer"><!--Footer de la page d'accueil-->
             <h2 class="home__title home__title--footer">ohmyfood</h2>
             <div class="home__nav">
                 <div class="home__nav--group">
@@ -157,7 +158,7 @@
                 </div>
                 <div class="home__nav--group">
                     <a class="home__nav--link" href="#">Mentions légales</a>
-                    <a class="home__nav--link" href="mailto:exemple@gmail.com">Contact</a>
+                    <a class="home__nav--link" href="mailto:exemple@gmail.com">Contact</a><!--Contact par email-->
                 </div>
             </div>
         </div>

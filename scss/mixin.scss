@@ -1,12 +1,12 @@
 @import 'variables';
-@mixin fav-select{
+@mixin fav-select{ //paramètres de coloration du coeur
   cursor: pointer;
   background: $purple-btn;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
 }
-@mixin checkbox-visibility{
+@mixin checkbox-visibility{ //paramètres de visibilité de la checkbox et de l'affichage de la version du coeur qui nous interesse
   .fav--check[type="checkbox"]:not(:checked) ~ .fav--rest .heart{
     display: flex;
   }

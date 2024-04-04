@@ -2,8 +2,6 @@
 @import "keyframe.scss";
 @import "mixin.scss";
 section {
-  //width: 100%;
-  //min-width: 375px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -44,23 +42,23 @@ section {
     object-fit: cover;
   }
 }
-input[type="checkbox"] {
+input[type="checkbox"] {          //On cache la checkbox
   display: none;
 }
-input[type="checkbox"]:checked ~ .menu__card--item .menu__card--item--checked--icon{
+input[type="checkbox"]:checked ~ .menu__card--item .menu__card--item--checked--icon{  //ici on affiche la coche au moment ou l'utilisateur clique sur le bouton
   transition: transform 350ms ease;
   scale: 1;
   transform: rotate(-360deg);
 }
-input[type="checkbox"]:not(:checked) ~ .menu__card--item .menu__card--item--checked--icon {
+input[type="checkbox"]:not(:checked) ~ .menu__card--item .menu__card--item--checked--icon { //ici on cache la coche
   transition: 350ms ease;
   scale: 0;
 }
-input[type="checkbox"]:checked ~ .menu__card--item .menu__card--item--checked , .menu__card--item--checked--icon{
+input[type="checkbox"]:checked ~ .menu__card--item .menu__card--item--checked , .menu__card--item--checked--icon{ //ici on déploie la div qui contient la coche
   transition: 350ms ease;
   width: 70px;
 }
-input[type="checkbox"]:not(:checked) ~ .menu__card--item .menu__card--item--checked{
+input[type="checkbox"]:not(:checked) ~ .menu__card--item .menu__card--item--checked{ //ici on cache la div qui contient la coche
   transition: 350ms ease;
   width: 0;
 }
@@ -97,20 +95,20 @@ input[type="checkbox"]:not(:checked) ~ .menu__card--item .menu__card--item--chec
       font-family: 'Shrikhand', serif;
     }
     &--fav {
-      @include checkbox-visibility;
+      @include checkbox-visibility; //appel du mixin pour les paramètres de visibilité de la checkbox et de l'affichage de la version du coeur qui nous interesse
       height: 26px;
       width: 26px;
-      .solidheart {
+      .solidheart { //coeur plein
         display: flex;
         justify-content: center;
         align-items: center;
         height: 26px;
         width: 26px;
         cursor: pointer;
-        @include fav-select;
+        @include fav-select; //appel du mixin pour les paramètres de coloration du coeur
         animation: fav 450ms;
       }
-      .heart {
+      .heart { //coeur vide
         display: flex;
         justify-content: center;
         align-items: center;
@@ -126,7 +124,7 @@ input[type="checkbox"]:not(:checked) ~ .menu__card--item .menu__card--item--chec
     flex-direction: column;
     justify-content: flex-start;
     animation: 400ms ease fadein both;
-    @for $i from 1 through 3 {
+    @for $i from 1 through 3 { //boucle pour décaler l'animation de chaque élément
       &--#{$i} {
         animation-delay: 200ms * $i;
       }
@@ -141,7 +139,7 @@ input[type="checkbox"]:not(:checked) ~ .menu__card--item .menu__card--item--chec
     height: 3px;
     background: #99E2D0;
     animation: 400ms ease fadein both;
-    @for $i from 1 through 3 {
+    @for $i from 1 through 3 { //boucle pour décaler l'animation de chaque élément
       &--#{$i} {
         animation-delay: 350ms * $i;
       }
@@ -153,7 +151,7 @@ input[type="checkbox"]:not(:checked) ~ .menu__card--item .menu__card--item--chec
     position: relative;
     overflow: hidden;
     animation: 400ms ease fadeout both;
-    @for $i from 1 through 10 {
+    @for $i from 1 through 10 { ////boucle pour décaler l'animation de chaque élément
       &--#{$i} {
         animation-delay: 150ms * $i;
       }

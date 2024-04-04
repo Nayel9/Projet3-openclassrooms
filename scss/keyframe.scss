@@ -1,4 +1,4 @@
-@keyframes fav{
+@keyframes fav{ // Cette keyframe gère l'animation du coeur lorsqu'il est sélectionné
   0%{
     transform: scale(0.8);
   }
@@ -43,7 +43,7 @@
     animation-timing-function: cubic-bezier(.42,0,.58,1);
   }
 }
-@keyframes bars {
+@keyframes bars { //Cette keyframe gère l'animation des barres de chargement du loader
   0% {
     transform: scaleY(0.3);
 
@@ -52,17 +52,17 @@
     transform: scaleY(1.0);
   }
 }
-@keyframes loader-container {
+@keyframes loader-container { //Cette keyframe s'occupe de faire disparaitre le loader et de rendre accessible toutes les fonction du site
   from {
     opacity: 100%;
   }
   to {
     opacity: 0;
     display: none;
-    z-index: -999;
+    z-index: -999; //On met le z-index à -999 pour que le loader ne soit plus au dessus de tout et empêche l'utilisation du site car il est en position fixed
   }
 }
-@keyframes fadein {
+@keyframes fadein { //Cette keyframe gère l'animation d'apparition des éléments de menu dans les pages restaurant
   from {
     transform: translateX(-100%);
     opacity: 0;
@@ -72,7 +72,7 @@
     opacity: 1;
   }
 }
-@keyframes fadeout {
+@keyframes fadeout { //Cette keyframe gère l'animation d'apparition des éléments de menu dans les pages restaurant
   from {
     transform: translateX(100%);
     opacity:0;

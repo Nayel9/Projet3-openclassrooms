@@ -47,12 +47,10 @@ input[type="checkbox"] {          //On cache la checkbox
 }
 input[type="checkbox"]:checked ~ .menu__card--item .menu__card--item--checked--icon{  //ici on affiche la coche au moment ou l'utilisateur clique sur le bouton
   transition: transform 350ms ease;
-  scale: 1;
-  transform: rotate(-360deg);
+  transform: rotate(-360deg) scale(1);
 }
 input[type="checkbox"]:not(:checked) ~ .menu__card--item .menu__card--item--checked--icon { //ici on cache la coche
   transition: 350ms ease;
-  scale: 0;
 }
 input[type="checkbox"]:checked ~ .menu__card--item .menu__card--item--checked , .menu__card--item--checked--icon{ //ici on déploie la div qui contient la coche
   transition: 350ms ease;
@@ -220,7 +218,7 @@ input[type="checkbox"]:not(:checked) ~ .menu__card--item .menu__card--item--chec
           border-radius: 50%;
           height: 20px;
           width: 20px;
-          scale: 0;
+          transform: rotate(0) scale(0);
         }
       }
     }

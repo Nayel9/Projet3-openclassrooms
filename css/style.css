@@ -379,13 +379,11 @@ input[type=checkbox] {
 
 input[type=checkbox]:checked ~ .menu__card--item .menu__card--item--checked--icon {
   transition: transform 350ms ease;
-  scale: 1;
-  transform: rotate(-360deg);
+  transform: rotate(-360deg) scale(1);
 }
 
 input[type=checkbox]:not(:checked) ~ .menu__card--item .menu__card--item--checked--icon {
   transition: 350ms ease;
-  scale: 0;
 }
 
 input[type=checkbox]:checked ~ .menu__card--item .menu__card--item--checked, .menu__card--item--checked--icon {
@@ -611,7 +609,7 @@ input[type=checkbox]:not(:checked) ~ .menu__card--item .menu__card--item--checke
   border-radius: 50%;
   height: 20px;
   width: 20px;
-  scale: 0;
+  transform: rotate(0) scale(0);
 }
 .menu__btn--cmd {
   width: 100%;
